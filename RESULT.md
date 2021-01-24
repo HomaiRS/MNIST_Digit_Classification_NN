@@ -46,7 +46,23 @@ I visualized about 5 cases that have different hyperparameters in Figure 4, 5, 6
  
 All the used hyperparameters are shown in the figures. In Figure 4, 5, 6, 7, and 8, I show how gradually I increased the accuracy on the test data by changing the hyperparameters.
 
-[MSE_mean2.pdf](https://github.com/HomaiRS/MNIST_Digit_Classification_NN/files/5862776/MSE_mean2.pdf)
+![MSE_mean2](https://user-images.githubusercontent.com/43753085/105638135-b43be080-5e36-11eb-9a29-fe110de037ad.png)
+
+![AccuracyPlot2](https://user-images.githubusercontent.com/43753085/105638164-d9305380-5e36-11eb-9627-e17e18ce220e.png)
+
+Mean square error plot for training and test data. (Top). Classification accuracy plot for the training and test data. (bottom)
+
+---
+
+As it is shown, the classification accuracy is pretty low on both test and training set. The reason behind it is that the eta is very high and the algorithm does not converge to the optimal weight. Thus, I changed the parameters and reran the code.
+
+![MSE_mean5](https://user-images.githubusercontent.com/43753085/105638205-0977f200-5e37-11eb-96bc-276592a86151.png)
+
+![AccuracyPlot5](https://user-images.githubusercontent.com/43753085/105638219-18f73b00-5e37-11eb-811f-74d4abe07b26.png)
+
+Mean square error plot for training and test data. (Top). Classification accuracy plot for the training and test data. (bottom)
+---
+
 
 
 
