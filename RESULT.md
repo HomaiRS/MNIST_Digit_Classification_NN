@@ -74,12 +74,7 @@ Mean square error plot for training and test data. (Top). Classification accurac
 I obtained the best classification accuracy using a three layers network with 20 neurons in the first layer and 10 neurons in the rest two layers. 
 
 ![bestAccuracy1](https://user-images.githubusercontent.com/43753085/105638321-a89ce980-5e37-11eb-8614-a42a479df156.png)
+
 ![bestAccuracy2](https://user-images.githubusercontent.com/43753085/105638324-ae92ca80-5e37-11eb-87e1-ee96865859dc.png)
+
 I got my best classification using a three layers network with 20 neurons in the first layer and 10 neurons in the rest two layers. 
-
----
-
-
-
-
-
