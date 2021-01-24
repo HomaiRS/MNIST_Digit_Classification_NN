@@ -26,5 +26,9 @@ I used “rand” function in Matlab to initialize the 10*784 weights matrix. Th
 
 Given that multi-category PTA did not result in accurate digit classification since the patterns are not linearly separable, as asecond approach, I used backpropagation algorithm for the same classification task on the same MNIST dataset. 
 
+I tried different network topologies to test what network architecture results in a better classification. In my first attempt, I constructed a flexible network that could have as many hidden layers and hidden neurons as I wanted, and the output layer was a single neuron indicated in Figure 1. I tried 1) two hidden layers with 10 hidden neurons in each layer 2) three hidden layers with 10 neurons in each layer 3) two hidden layers with 50 neurons in the first layer and 10 layers in the rest two layers. However, none of these network topologies led to a promising classification accuracy and low mean square error value. One of the biggest challenges I faced was what would be the best activation function for the last hidden layer that can map the (e.g., n=10) neurons of the last layer to a single value (digit) as each output digit was represented as discrete integers from 0 to 9. 
+
+I tried four different activation functions including tangh, ReLue function, signum, and sigmoid. The output of each network using either one of these activation functions looked odd; mainly, because some of these functions such as sigmoid ranges from 0 to 1 and contains continuous values, and interpreting the output was challenging since digits are expected to be discrete numbers. Also, sign function has always zero derivative, so it was not a proper activation function to use in backpropagation algorithm. After, tunning hyperparameters and using different activation functions, but not getting a satisfactory output from the network, I changed the topology of the network. 
+
 
 
