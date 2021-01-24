@@ -34,6 +34,19 @@ I tried four different activation functions including tangh, ReLue function, sig
 
 ![Topology2_success](https://user-images.githubusercontent.com/43753085/105638058-50b1b300-5e36-11eb-8a81-1db374faefe9.jpg)
 
+In the new architecture of the network, I represented digits 0, 1, …9, in the output layer as a one-zero vector that all its elements are 0 except the corresponding index to the actual digit that has a value of 1. The way I represented digits is shown in Figure 3.
+
+![digits](https://user-images.githubusercontent.com/43753085/105638072-658e4680-5e36-11eb-9366-b75efb45d064.png)
+
+I changed hyperparameters values including the learning rate, number of hidden layers, number of hidden neurons, activation function, variance/distribution used for initializing the weights, and etc. to see how the misclassification error/classification accuracy changes. Even though I changed the number of neurons and layers as well as other hyper parameters, I utilized the same activation function throughout the network. I used sigmoid function that is infinitely many times differentiable. 
+
+I utilized online learning. I used 50,000 images as the training data and 10,000 as the test data. The test data and training data do not have any overlap. In order to find the optimal weights that minimizes the energy function in backpropagation algorithm, the model has been trained only on the training data and then tested on the test data. 
+
+I visualized about 5 cases that have different hyperparameters in Figure 4, 5, 6, 7, 8. In each of these figures, I showed how the training and test accuracy changes per epoch until convergence, as well as showing how the mean squared error (MSE) on train and test data changes per epoch. In the top figure, MSE of the train is lower than the MSE of the test set as we are training the data on that set, so the residual should be smaller values. Also, the accuracy plot shows that the training maximum accuracy on the training data is 43% and maximum accuracy on the test set is ~30%. The parameters used in this run of the algorithm is eta=10 with maximum number of epoch = 200. The network has 2 hidden layers and 10 neurons per layer.
+ 
+All the used hyperparameters are shown in the figures. In Figure 4, 5, 6, 7, and 8, I show how gradually I increased the accuracy on the test data by changing the hyperparameters.
+
+[MSE_mean2.pdf](https://github.com/HomaiRS/MNIST_Digit_Classification_NN/files/5862776/MSE_mean2.pdf)
 
 
 
