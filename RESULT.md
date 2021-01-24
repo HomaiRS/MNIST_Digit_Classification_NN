@@ -61,10 +61,23 @@ As it is shown, the classification accuracy is pretty low on both test and train
 ![AccuracyPlot5](https://user-images.githubusercontent.com/43753085/105638219-18f73b00-5e37-11eb-811f-74d4abe07b26.png)
 
 Mean square error plot for training and test data. (Top). Classification accuracy plot for the training and test data. (bottom)
+
 ---
 
+![MSE_mean3](https://user-images.githubusercontent.com/43753085/105638261-58258c00-5e37-11eb-86ee-0af1ab602aea.png)
 
+![AccuracyPlot3](https://user-images.githubusercontent.com/43753085/105638285-75f2f100-5e37-11eb-9518-aaab4bc3a216.png)
 
+Mean square error plot for training and test data. (Top). Classification accuracy plot for the training and test data. (bottom)
+
+---
+I obtained the best classification accuracy using a three layers network with 20 neurons in the first layer and 10 neurons in the rest two layers. 
+
+![bestAccuracy1](https://user-images.githubusercontent.com/43753085/105638321-a89ce980-5e37-11eb-8614-a42a479df156.png)
+![bestAccuracy2](https://user-images.githubusercontent.com/43753085/105638324-ae92ca80-5e37-11eb-87e1-ee96865859dc.png)
+I got my best classification using a three layers network with 20 neurons in the first layer and 10 neurons in the rest two layers. 
+
+---
 
 
 
