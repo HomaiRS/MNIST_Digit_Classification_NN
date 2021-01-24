@@ -19,6 +19,8 @@ By running this on n = 60,000 training images using ϵ~0 (10^(-6)), the misclass
 
 ![Part_h_ErrorPlotV2](https://user-images.githubusercontent.com/43753085/105637694-4db5c300-5e34-11eb-9360-fe847f777f1b.png)
 
+I used “rand” function in Matlab to initialize the 10*784 weights matrix. Thus, each time, that the categorical PTA code is ran, the weight matrix has different values. Also, ϵ is set to 10^(-6), and η equals to 1. The weights are trained on 60,000 train images and tested on 10,000 test images. The lowest train error (misclassification on train images) in second-run converged to 8.33%, and the corresponding test error for the learned weights was 40.5%. In first-run the training error was 83% and the test error was 73%. Using lower tolerances, I obtained a better test error while the misclassification error on the train set does not converge to 0. 
+
 
 
 
