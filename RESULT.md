@@ -14,3 +14,11 @@ Using only 50 training images to learn the weights, the percentage of the miscla
 Using n = 1000, η=1,ϵ~0 (10^(-6)), the misclassification error versus epochs plot is shown below. The error plot is more oscillatory than before, but eventually the error reaches 0 again (after ~350 epochs). 
 
 ![Part_g_ErrorPlot](https://user-images.githubusercontent.com/43753085/105637503-7be6d300-5e33-11eb-9843-1260d2581d27.png)
+
+By running this on n = 60,000 training images using ϵ~0 (10^(-6)), the misclassification error increases by increasing the number of epochs. One reason that misclassification error does not converge to 0, or it does not go below the threshold/tolerance (ϵ) is that the patterns are not linearly separable. The error does not reach the stopping criteria even after 10,000 iterations. In the following, the error plot shows that the algorithm does not reach the solution even after running ~850 iterations. 
+
+![Part_h_ErrorPlotV2](https://user-images.githubusercontent.com/43753085/105637694-4db5c300-5e34-11eb-9360-fe847f777f1b.png)
+
+
+
+
