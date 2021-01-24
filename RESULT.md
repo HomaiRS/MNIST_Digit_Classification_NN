@@ -1,1 +1,16 @@
-I implemented the multicategory PTA for digit classification in MATLAB. First, I read the contents of the webpage http://yann.lecun.com/exdb/mnist/ 
+I implemented the multicategory PTA for digit classification in MATLAB. Data was downloaded from <http://yann.lecun.com/exdb/mnist/>. Four files listed on top of the webpage are required to be downloaded including training set images, training set labels, test set images, and test set labels. In the Matlab codes “MNIST_digit_classification.m” is the main function that calls “ReadBinaryImages.m” for reading binary MNIST dataset images. Below, I showed the first 100 images in the train set having their actual labels in the title to validate data reader function works properly, and labels are match with the images.
+
+![TestImages_100](https://user-images.githubusercontent.com/43753085/105637029-d3377400-5e30-11eb-91d5-289f4fc45294.png)
+
+“VectorizeMx” function is used to vectorize each 28*28 image. “ActivationStepfunction” is the activation function which in this question, step function is used as the activation function. “DesireOutput” function outputs d(x_i). To efficiently computate weights in the code, instead of programming the multicategory Perceptron Algorithm (PTA) with loope while calculating misclassification errors based on the values of induced local fields on the the vectorized version of the
+28 × 28 image from the training set images, I used matrix multiplications. Further, in “myPTA_OnTestSet” function, I do not compute the weights agian, and instead I used the weights that are already learned on the first n≤60000 training set images, and applied them on the 10,000 test set images.
+
+Since the patterns are not linearly separable, the misclassification errors may not converge to 0; therefore, I stopped the iterations (epochs) when the ratio of misclassified input patterns falls below some threshold ε. I observed this step terminates with 0 errors eventually in small number of epochs (e.g., 14, 16, etc.) using n = 50, η=1,ϵ~0 (10^(-6)). Thus, the training error is 0%. The error curve indicates some oscillations, and it is not strictly descending, as indicated below. As epoch values increases the error decreases, and eventually it reaches 0, as shown below.
+
+![Part_f_ErrorPlot](https://user-images.githubusercontent.com/43753085/105637383-e6e3da00-5e32-11eb-91ce-0a037faeecd8.png)
+
+Using only 50 training images to learn the weights, the percentage of the misclassification error over all 10,000 test samples will be 37.28%. The misclassification error of the training set is lower than this error on test set. Probably because we tune/compute weights on the chosen training images, so we have small error on this set, but these weights are not specifically learned on the test data, so the test data have higher misclassification error. In the next step we show that if we learn the weights using a larger number of train images, the classification results on the test set will be more accurate. Also, another reason for the discrepancy of errors obtained through the test and train sets might be the over-fitting problem while the train error is 0 and it contains small number of samples. 
+
+Using n = 1000, η=1,ϵ~0 (10^(-6)), the misclassification error versus epochs plot is shown below. The error plot is more oscillatory than before, but eventually the error reaches 0 again (after ~350 epochs). 
+
+![Part_g_ErrorPlot](https://user-images.githubusercontent.com/43753085/105637503-7be6d300-5e33-11eb-9843-1260d2581d27.png)
